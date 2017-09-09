@@ -30,9 +30,11 @@
   },
   "dependencies": {
     "bluebird": "^3.5.0",
+    "body-parser": "^1.18.0",
     "ejs": "^2.5.7",
     "express": "^4.15.3",
     "express-ejs-layouts": "^2.3.1",
+    "method-override": "^2.3.9",
     "mongoose": "^4.11.10",
     "morgan": "^1.8.2"
   }

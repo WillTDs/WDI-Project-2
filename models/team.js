@@ -7,8 +7,8 @@ const commentSchema = new mongoose.Schema({
 
 const teamSchema = new mongoose.Schema({
   name: String,
-  day: String,
   format: String,
+  day: String,
   location: String,
   comments: [ commentSchema ]
 });

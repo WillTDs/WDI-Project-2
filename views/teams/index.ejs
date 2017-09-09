@@ -1,4 +1,8 @@
+<h1>TEAMS PAGE</h1>
+
 <% teams.forEach((team) => { %>
-  <h1><%= team.name %></h1>
-  <h2><%= team.format %></h2>
-<% } %>
+  <h2><%= team.name %></h2>
+  <h3><%= team.format %></h3>
+  <h3><%= team.day %></h3>
+  <h3><%= team.location %></h3>
+<% }) %>

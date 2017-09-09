@@ -5,7 +5,7 @@ function teamsIndex(req, res) {
     .find()
     .exec()
     .then((teams) =>{
-      res.render('teams/index', {teams});
+      res.render('teams/index', { teams });
     })
     .catch((err) =>{
       res.status(500).render('error', { err });
