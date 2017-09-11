@@ -7,9 +7,10 @@ const commentSchema = new mongoose.Schema({
 
 const teamSchema = new mongoose.Schema({
   name: String,
+  league: String,
   format: String,
   day: String,
-  location: String,
+  venue: { type: mongoose.Schema.ObjectId, ref: 'Venue' },
   comments: [ commentSchema ]
 });
 

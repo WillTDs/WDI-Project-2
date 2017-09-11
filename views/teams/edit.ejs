@@ -1,0 +1,26 @@
+<div class="teamEditBox">
+  <form method="POST" action="/teams/<%= team.id %>">
+    <input type="hidden" name="_method" value="PUT">
+    <div>
+      <label>Team Name</label>
+      <input type="text" name="name" value="<%= team.name %>">
+    </div>
+    <div>
+      <label>Venue</label>
+      <select name="venue">
+        <% venues.forEach((venue)=> { %>
+          <option value="<%= venue.id %>" <% if(venue.id === team.venue.id) { %>selected<% }%>><%= venue.name %></option>
+        <% }) %>
+      </select>
+    </div>
+    <div>
+      <label>Format</label>
+      <input type="text" name="format" value="<%= team.format %>">
+    </div>
+    <div>
+      <label>Day</label>
+      <input type="text" name="day" value="<%= team.day %>">
+    </div>
+    <button>Update</button>
+  </form>
+</div>

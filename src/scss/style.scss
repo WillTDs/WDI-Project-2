@@ -1,3 +1,55 @@
 body {
   color: tomato;
+  margin: 0 40px;
+}
+
+header {
+  border: 2px solid grey;
+}
+
+.col-lg-5 {
+  border: 2px solid grey;
+  margin-top: 20px;
+}
+
+.teamEditBox {
+  border: 2px solid grey;
+}
+
+.teamShowBox {
+  border: 2px solid grey;
+}
+
+h1 {
+  border: 2px solid grey;
+  margin: 20px 0;
+  }
+  .brand {
+    border: none;
+  }
+
+.label {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+//NAV BAR
+nav.navbar{
+  font-size: 24px;
+}
+  .links {
+    flex-direction: row;
+  }
+  .navLink {
+    padding: 0 10px;
+    justify-content: left;
+  }
+  .navbar.navbar-inverse {
+    padding-left: 0;
+  }
+  .registerBtn {
+    margin-top: 20px;
+  }
+
+.container-fluid {
+  margin-top: 20px;
 }

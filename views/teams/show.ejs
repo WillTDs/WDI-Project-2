@@ -1,0 +1,43 @@
+<h1>SHOW PAGE</h1>
+<div class="container">
+
+<div class="row">
+<div class="teamShowBox col-lg-5">
+  <h2><%= team.name %></h2>
+  <h4><%= team.day %></h4>
+  <p><%= team.format %></p>
+  <p><%= team.venue.name %></p>
+  <a class="edit" href="/teams/<%= team.id %>/edit">Edit</a>
+  <form class="comment" action="/teams/<%= team.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+  <div class="col-2">
+    <button class="delete">Delete</button>
+  </div>
+</form>
+</div>
+
+<div class="comments col-lg-5">
+
+  <%# ---- COMMENT FORM ---- %>
+  <form method="POST" action="/teams/<%= team.id %>/comments">
+    <div>
+      <label>Comment</label>
+      <textarea name="text"></textarea>
+    </div>
+    <%# ---- RATE THE RECIPE TICK BOX ---- %>
+
+    <%# ---- ADD COMMENT AND RATING BUTTON ---- %>
+    <button>Add</button>
+  </form>
+
+<% team.comments.forEach(comment => { %>
+  <li><%= comment.text %> - <%= comment.rating %>/5</li>
+    <form class="comment" action="/teams/<%= team.id %>/comments/<%= comment.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+    <div class="col-2">
+      <button class="delete">Delete</button>
+    </div>
+  </form>
+<% }) %>
+</div>
+</div>
