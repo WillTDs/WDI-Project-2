@@ -1,12 +1,28 @@
 <h1 class="title">Teams</h1>
 <div class="container-fluid mainWrap">
   <div class="row">
+    <div class="col-4 teamIndex">
+      <h3>Team name</h3>
+    </div>
+    <div class="col-4 teamIndex">
+      <h3>League</h3>
+    </div>
+    <div class="col-4 teamIndex">
+      <h3>Status</h3>
+    </div>
+  </div>
+  <div class="row">
   <% teams.forEach((team) => { %>
-    <div class="col-lg-6 showBox">
-      <h2><a href="/teams/<%= team.id %>"><%= team.name %></a></h2>
-      <h3><%= team.venue.name %></h3>
+    <div class="col-4 showBox">
+      <h4><a href="/teams/<%= team.id %>"><%= team.name %></a></h4>
+    </div>
+    <div class="col-4 showBox">
+      <h4><%= team.venue.name %></h4>
+    </div>
+    <div class="col-4 showBox">
       <% if (team.statuses[0]) { %>
-      <h3><%= team.statuses[0].text %></h3>
+      <h4><%= team.statuses[0].text %></h4>
+    </div>
       <% } %>
     </div>
   <% }) %>

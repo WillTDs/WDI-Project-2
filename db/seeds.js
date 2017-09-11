@@ -18,7 +18,7 @@ User.create([{
   passwordConfirmation: 'password'
 }])
   .then(users => {
-    console.log(`${users.length} teams created`);
+    console.log(`${users.length} users created`);
     return Venue.create([{
       name: 'Canary Wharf',
       pitch: 'Grass',
@@ -72,85 +72,128 @@ User.create([{
     }]);
   })
   .then(venues => {
-
+    console.log(`${venues.length} venues created`);
     return Team.create([{
       name: 'FC Twente Bensons',
-      venue: venues[0],
+      venue: venues[0, 2],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Petr Cech Yourself',
-      venue: venues[0],
+      venue: venues[0, 2],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Haven’t Got a Kalou',
-      venue: venues[2],
+      venue: venues[0, 2],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'We Arbeloa Lot of Teams',
-      venue: venues[3],
+      venue: venues[0, 2],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Murder On Zidane’s Floor',
-      venue: venues[3],
+      venue: venues[0, 2],
       statuses: [{
         text: 'Need players asap'
       }]
     },{
-      name: 'Le Saux Solid Crew',
-      venue: venues[2],
+      name: 'Don’tCallMeSchürrle',
+      venue: venues[0, 2],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
-      name: 'Le Saux Solid Crew',
-      venue: venues[2],
+      name: 'Beat Around Debuchy',
+      venue: venues[1, 4],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
-      name: 'Le Saux Solid Crew',
-      venue: venues[2],
+      name: 'Lallanas in Pyjamas',
+      venue: venues[1, 4],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
-      name: 'Le Saux Solid Crew',
-      day: 'Wednesday',
-      format: '7-a-side',
-      venue: venues[2],
+      name: '50 Shades O’Shea',
+      venue: venues[1, 4],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
-      name: 'Le Saux Solid Crew',
-      day: 'Wednesday',
-      format: '7-a-side',
-      venue: venues[2],
+      name: 'One Flew Over Lukaku’s Nest',
+      venue: venues[1, 4],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
-      name: 'Le Saux Solid Crew',
-      day: 'Wednesday',
-      format: '7-a-side',
-      venue: venues[2],
+      name: 'Bayer Neverlusen',
+      venue: venues[2, 3],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Chiellini Con Carne',
+      venue: venues[2, 3],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Ospina Colada',
+      venue: venues[2, 3],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Kroos Control',
+      venue: venues[4, 3],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Gylfi Pleasures',
+      venue: venues[3, 4],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Boom Xhakalaka',
+      venue: venues[3, 4],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Pleased to Michu',
+      venue: venues[3, 2],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Obi Wan – Kenobi Nil',
+      venue: venues[3, 4],
       comments: [{
         text: 'Need players asap',
         rating: 5

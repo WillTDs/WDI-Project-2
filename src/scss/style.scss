@@ -1,6 +1,6 @@
 
 body {
-  color: tomato;
+  color: black;
   margin: 0 40px;
 }
 
@@ -9,27 +9,41 @@ body {
   background-color: white;
 }
 
-img {
+img.logo {
   width: 380px;
+}
+
+img {
+  max-width: 540px;
 }
 
 header {
   margin-bottom: 20px;
+}
+//// HOME SCREEN
+.homeWrap {
+  border: 0.5px solid green;
+}
+
+p {
+  font-size: 20px;
 }
 
 //// VENUE SCREEN
 .venue {
   border: 2px solid black;
 }
-///
-// .col-lg-5 {
-//   border: 2px solid grey;
-//   margin-top: 20px;
-//   background-color: white;
-// }
-
+//// TEAM SCREEN
 .showBox {
-  border: 2px solid green;
+  border: 1px solid green;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.teamIndex {
+  text-align: center;
+  padding: 5px 0;
+  color: grey;
 }
 
 h1 {
