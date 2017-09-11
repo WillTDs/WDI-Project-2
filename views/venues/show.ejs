@@ -1,14 +1,20 @@
-<h2><%= venue.name %></h2>
-
 <div class="container-fluid">
-<% teams.forEach((team) => { %>
   <div class="row">
-  <div class="col-lg-5">
-    <h2><a href="/teams/<%= team.id %>"><%= team.name %></a></h2>
-    <h3><%= team.format %></h3>
-    <h3><%= team.day %></h3>
-    <h3><%= team.venue %></h3>
+    <div class="col-lg-4 venue">
+      <h2><%= venue.name %></h2>
+      <h4><%= venue.pitch %></h4>
+      <h4><%= venue.format %></h4>
+      <h4><%= venue.day %></h4>
+      <h4><%= venue.address %></h4>
+    </div>
+    <div class="col-lg-4 venue">
+      <p>THIS WILL BE A GOOGLE MAP DISPLAY</p>
+    </div>
+    <div class="col-lg-4 venue">
+      <h2>Teams In League</h2>
+      <% teams.forEach((team) => { %>
+      <h4><a href="/teams/<%= team.id %>"><%= team.name %></a></h4>
+      <% }) %>
+    </div>
   </div>
-  </div>
-<% }) %>
 </div>

@@ -4,6 +4,7 @@ const Venue = require('../models/venue');
 function teamsIndex(req, res) {
   Team
     .find()
+    .populate('venue')
     .exec()
     .then((teams) =>{
       res.render('teams/index', { teams });

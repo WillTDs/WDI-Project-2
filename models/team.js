@@ -5,12 +5,16 @@ const commentSchema = new mongoose.Schema({
   rating: Number
 });
 
+const statusSchema = new mongoose.Schema({
+  text: String
+}, {
+  timestamps: true
+});
+
 const teamSchema = new mongoose.Schema({
   name: String,
-  league: String,
-  format: String,
-  day: String,
   venue: { type: mongoose.Schema.ObjectId, ref: 'Venue' },
+  statuses: [ statusSchema ],
   comments: [ commentSchema ]
 });
 

@@ -5,6 +5,7 @@ const teams = require('../controllers/teams');
 const venues = require('../controllers/venues');
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
+const statuses = require('../controllers/statuses');
 const users = require('../controllers/users');
 const secureRoute = require('../lib/secureRoute');
 
@@ -50,6 +51,12 @@ router.route('/teams/:id/comments')
 
 router.route('/teams/:id/comments/:commentId')
   .delete(teams.commentsDelete);
+
+router.route('/teams/:id/statuses')
+  .post(statuses.create);
+
+router.route('/teams/:id/statuses/:statusId')
+  .delete(statuses.delete);
 
 router.get('/logout', sessions.delete);
 

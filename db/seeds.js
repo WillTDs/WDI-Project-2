@@ -18,31 +18,63 @@ User.create([{
   passwordConfirmation: 'password'
 }])
   .then(users => {
-    console.log(`${users.length} users created`);
+    console.log(`${users.length} teams created`);
     return Venue.create([{
-      name: 'Highbury',
-      pitch: 'grass',
-      address: '1arsenal'
+      name: 'Canary Wharf',
+      pitch: 'Grass',
+      format: '5-A-SIDE',
+      day: 'Thursday',
+      address: 'Rokerby School, Barking Road, E16 4DD',
+      location: {
+        lat: 51.5186123,
+        lng: 0.0134932
+      }
     }, {
-      name: 'Cambridge',
+      name: 'Stratford',
       pitch: 'Astro',
-      address: '1arsenal'
+      format: '7-A-SIDE',
+      day: 'Thursday',
+      address: 'Chobham Academy, 40 Cheering Lane, E20 1BD',
+      location: {
+        lat: 51.5493111,
+        lng: 0.0094444
+      }
     }, {
-      name: 'Bethnal Green',
-      pitch: 'Grass',
-      address: '1arsenal'
+      name: 'Liverpool Street',
+      pitch: 'Astro',
+      format: '5-A-SIDE',
+      day: 'Sunday',
+      address: 'Bow School, Rooftop pitch, E3 3QW',
+      location: {
+        lat: 51.5234183,
+        lng: -0.0117561
+      }
     }, {
-      name: 'Mile End',
+      name: 'Caledonian Road',
       pitch: 'Grass',
-      address: '1arsenal'
+      format: '7-A-SIDE',
+      day: 'Thursday',
+      address: 'Holloway School, Caledonian Road, N7 0EQ',
+      location: {
+        lat: 51.5574908,
+        lng: -0.1411286
+      }
+    }, {
+      name: 'Vauxhall',
+      pitch: 'Grass',
+      format: '5-A-SIDE',
+      day: 'Sunday',
+      address: 'Vauxhall rhino turf, Lollard Street, SE11 6PX',
+      location: {
+        lat: 51.4654221,
+        lng: -0.2198861
+      }
     }]);
   })
   .then(venues => {
 
     return Team.create([{
       name: 'FC Twente Bensons',
-      day: 'Thursday',
-      format: '5-a-side',
       venue: venues[0],
       comments: [{
         text: 'Need players asap',
@@ -50,8 +82,6 @@ User.create([{
       }]
     },{
       name: 'Petr Cech Yourself',
-      day: 'Sunday',
-      format: '5-a-side',
       venue: venues[0],
       comments: [{
         text: 'Need players asap',
@@ -59,27 +89,41 @@ User.create([{
       }]
     },{
       name: 'Haven’t Got a Kalou',
-      day: 'Thursday',
-      format: '7-a-side',
-      venue: venues[0],
+      venue: venues[2],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'We Arbeloa Lot of Teams',
-      day: 'Sunday',
-      format: '5-a-side',
-      venue: venues[0],
+      venue: venues[3],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Murder On Zidane’s Floor',
-      day: 'Sunday',
-      format: '5-a-side',
-      venue: venues[0],
+      venue: venues[3],
+      statuses: [{
+        text: 'Need players asap'
+      }]
+    },{
+      name: 'Le Saux Solid Crew',
+      venue: venues[2],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Le Saux Solid Crew',
+      venue: venues[2],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Le Saux Solid Crew',
+      venue: venues[2],
       comments: [{
         text: 'Need players asap',
         rating: 5
@@ -88,7 +132,25 @@ User.create([{
       name: 'Le Saux Solid Crew',
       day: 'Wednesday',
       format: '7-a-side',
-      venue: venues[0],
+      venue: venues[2],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Le Saux Solid Crew',
+      day: 'Wednesday',
+      format: '7-a-side',
+      venue: venues[2],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
+      }]
+    },{
+      name: 'Le Saux Solid Crew',
+      day: 'Wednesday',
+      format: '7-a-side',
+      venue: venues[2],
       comments: [{
         text: 'Need players asap',
         rating: 5

@@ -1,19 +1,17 @@
+<header>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <h1 class="brand">Footy Finder</h1>
-    </div>
     <ul class="nav navbar-nav navbar-left links">
       <li class="active"><a class="navLink"href="/">Home</a></li>
       <li><a class="navLink" href="/teams">Teams</a></li>
-      <li><a class="navLink" href="/venues">Venue</a></li>
+      <li><a class="navLink" href="/venues">Venues</a></li>
       <% if (locals.isAuthenticated) { %>
       <li><a class="navLink" href="/teams/new">New Team</a></li>
       <% } %>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav account">
       <% if (locals.isAuthenticated) { %>
-      <li><a href="/logout">Logout</a></li>
+        <li><a href="/logout">Logout</a></li>
       <% } else { %>
         <li><a href="/register">Register</a></li>
         <li><a href="/login">Login</a></li>
@@ -21,3 +19,4 @@
     </ul>
   </div>
 </nav>
+</header>
