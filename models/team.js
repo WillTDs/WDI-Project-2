@@ -13,7 +13,7 @@ const statusSchema = new mongoose.Schema({
 
 const teamSchema = new mongoose.Schema({
   name: String,
-  venue: { type: mongoose.Schema.ObjectId, ref: 'Venue' },
+  venue: [{ type: mongoose.Schema.ObjectId, ref: 'Venue' }],
   statuses: [ statusSchema ],
   comments: [ commentSchema ]
 });

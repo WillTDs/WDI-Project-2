@@ -103,97 +103,98 @@ User.create([{
       }]
     },{
       name: 'Murder On Zidane’s Floor',
-      venue: venues[0, 2],
-      statuses: [{
-        text: 'Need players asap'
+      venue: [venues[0], venues[2]],
+      comments: [{
+        text: 'Need players asap',
+        rating: 5
       }]
     },{
       name: 'Don’tCallMeSchürrle',
-      venue: venues[0, 2],
+      venue: [venues[0], venues[2]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Beat Around Debuchy',
-      venue: venues[1, 4],
+      venue: [venues[1], venues[4]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Lallanas in Pyjamas',
-      venue: venues[1, 4],
+      venue: [venues[1], venues[4]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: '50 Shades O’Shea',
-      venue: venues[1, 4],
+      venue: [venues[1], venues[4]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'One Flew Over Lukaku’s Nest',
-      venue: venues[1, 4],
+      venue: [venues[1], venues[4]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Bayer Neverlusen',
-      venue: venues[2, 3],
+      venue: [venues[2], venues[3]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Chiellini Con Carne',
-      venue: venues[2, 3],
+      venue: [venues[2], venues[3]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Ospina Colada',
-      venue: venues[2, 3],
+      venue: [venues[2], venues[3]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Kroos Control',
-      venue: venues[4, 3],
+      venue: [venues[3], venues[4]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Gylfi Pleasures',
-      venue: venues[3, 4],
+      venue: [venues[3], venues[4]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Boom Xhakalaka',
-      venue: venues[3, 4],
+      venue: [venues[3], venues[4]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Pleased to Michu',
-      venue: venues[3, 2],
+      venue: [venues[3], venues[2]],
       comments: [{
         text: 'Need players asap',
         rating: 5
       }]
     },{
       name: 'Obi Wan – Kenobi Nil',
-      venue: venues[3, 4],
+      venue: [venues[3], venues[4]],
       comments: [{
         text: 'Need players asap',
         rating: 5

@@ -12,19 +12,18 @@
     </div>
   </div>
   <div class="row">
-  <% teams.forEach((team) => { %>
-    <div class="col-4 showBox">
-      <h4><a href="/teams/<%= team.id %>"><%= team.name %></a></h4>
-    </div>
-    <div class="col-4 showBox">
-      <h4><%= team.venue.name %></h4>
-    </div>
-    <div class="col-4 showBox">
+    <% teams.forEach((team) => { %>
+      <div class="col-4 showBox">
+        <h4><a href="/teams/<%= team.id %>"><%= team.name %></a></h4>
+      </div>
+      <div class="col-4 showBox">
+        <h4><%= team.venue.name %></h4>
+      </div>
+        <div class="col-4 showBox">
       <% if (team.statuses[0]) { %>
       <h4><%= team.statuses[0].text %></h4>
-    </div>
+      </div>
       <% } %>
     </div>
   <% }) %>
-  </div>
 </div>
