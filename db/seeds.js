@@ -4,7 +4,7 @@ const Team = require('../models/team');
 const User = require('../models/user');
 const Venue = require('../models/venue');
 
-const dbURI = 'mongodb://localhost/wdi-project-2';
+const { dbURI } = require('../config/environment');
 mongoose.connect(dbURI, { useMongoClient: true });
 
 Team.collection.drop();
