@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const commentSchema = new mongoose.Schema({
   text: String,
-  rating: Number
+  rating: Number,
+  user: { type: mongoose.Schema.ObjectId, ref: 'User' }
 });
 
 const statusSchema = new mongoose.Schema({
@@ -13,9 +14,12 @@ const statusSchema = new mongoose.Schema({
 
 const teamSchema = new mongoose.Schema({
   name: String,
-  venue: [{ type: mongoose.Schema.ObjectId, ref: 'Venue' }],
+  image: String,
+  color: String,
+  venues: [{ type: mongoose.Schema.ObjectId, ref: 'Venue' }],
   statuses: [ statusSchema ],
-  comments: [ commentSchema ]
+  comments: [ commentSchema ],
+  user: { type: mongoose.Schema.ObjectId, ref: 'User' }
 });
 
 module.exports = mongoose.model('Team', teamSchema);

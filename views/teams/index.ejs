@@ -1,5 +1,5 @@
-<h1 class="title">Teams</h1>
-<div class="container-fluid mainWrap">
+
+<div class="container box">
   <div class="row">
     <div class="col-4 teamIndex">
       <h3>Team name</h3>
@@ -17,13 +17,15 @@
         <h4><a href="/teams/<%= team.id %>"><%= team.name %></a></h4>
       </div>
       <div class="col-4 showBox">
-        <h4><%= team.venue.name %></h4>
+      <h4>
+      <%= team.venues.map(venue => venue.name).join(', ') %>
+      </h4>
       </div>
-        <div class="col-4 showBox">
+      <div class="col-4 showBox">
       <% if (team.statuses[0]) { %>
-      <h4><%= team.statuses[0].text %></h4>
-      </div>
+        <h4><%= team.statuses[0].text %></h4>
       <% } %>
-    </div>
-  <% }) %>
+      </div>
+    <% }) %>
+  </div> <%#/* closing row tag - left outside of loop */%>
 </div>

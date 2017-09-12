@@ -1,19 +1,21 @@
 <div class="container">
-  <form method="POST" action="/login">
-    <div class="field">
-      <label class="label">Email</label>
-      <div class="control">
-        <input class="input" name="email" type="text" placeholder="Email">
-      </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3 box">
+      <form method="POST" action="/login">
+        <div class="form-group">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="form-control" name="email" type="text">
+          </div>
+          <label class="label">Password</label>
+          <div class="control">
+            <input class="form-control" name="password" type="password">
+          </div>
+        </div>
+        <div class="control">
+          <button class="btn btn-success">Login</button>
+        </div>
+      </form>
     </div>
-    <div class="field">
-      <label class="label">Password</label>
-      <div class="control">
-        <input class="input" name="password" type="password" placeholder="Password">
-      </div>
-    </div>
-    <div class="control">
-      <button>Login</button>
-    </div>
-  </form>
+  </div>
 </div>

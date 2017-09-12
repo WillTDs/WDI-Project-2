@@ -1,16 +1,52 @@
+body, html {
+  height: 100%;
+  min-height: 100%;
+}
 
 body {
   color: black;
-  margin: 0 40px;
+  background-color: #5cb85c;
+  &.home {
+    background-image: url('../assets/images/home.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 }
 
-.jumbotron {
-  padding: 0;
+h2 {
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.box {
   background-color: white;
+  padding: 30px 40px;
+  border-radius: 5px;
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+}
+
+.info {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-stack {
+  margin-bottom: 10px;
 }
 
 img.logo {
-  width: 380px;
+  height: 85px;
 }
 
 img {
@@ -22,7 +58,7 @@ header {
 }
 //// HOME SCREEN
 .homeWrap {
-  border: 0.5px solid green;
+  border: 0.5px solid #5cb85c;
 }
 
 p {
@@ -31,11 +67,40 @@ p {
 
 //// VENUE SCREEN
 .venue {
-  border: 2px solid black;
+  border: 2px solid #5cb85c;
+}
+
+.card {
+  padding: 15px;
+}
+
+.card-img-top.ven {
+  height: 210px;
+  width: 100%;
 }
 //// TEAM SCREEN
+.card-img-top.team {
+  width: 100%;
+  text-align: center;
+}
+
+.commentTitle {
+  margin-top: 20px;
+}
+.btn.btn-primary.delete {
+  margin-top: 20px;
+}
+
+.teamCardVenue {
+  font-size: 30px;
+  text-align: center;
+  }
+  .top {
+    padding-top: 10px;
+  }
+
 .showBox {
-  border: 1px solid green;
+  border: 1px solid #5cb85c;
   text-align: center;
   padding: 5px 0;
 }
@@ -62,26 +127,12 @@ h1 {
   margin-top: 10px;
 }
 //NAV BAR
-nav.navbar{
-  margin-top: 8px;
-  font-size: 24px;
-  border: 2px solid green;
+.navbar{
+  font-size: 22px;
 }
-  .links {
-    flex-direction: row;
-  }
-  .navLink {
-    padding: 0 10px;
-    justify-content: left;
-  }
-  .navbar.navbar-inverse {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .registerBtn {
-    margin-top: 20px;
-  }
 
-.container-fluid {
-  justify-content: space-around;
+#map {
+  border: none;
+  height: 300px;
+  background-color: tomato;
 }

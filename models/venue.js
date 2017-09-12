@@ -5,6 +5,7 @@ const venueSchema = new mongoose.Schema({
   pitch: String,
   format: String,
   day: String,
+  image: String,
   address: String,
   location: {
     lat: Number,

@@ -9,7 +9,7 @@ const statuses = require('../controllers/statuses');
 const users = require('../controllers/users');
 const secureRoute = require('../lib/secureRoute');
 
-router.get('/', (req, res) => res.render('home'));
+router.get('/', (req, res) => res.render('home', { isHomepage: true }));
 
 router.route('/venues')
   .get(venues.index);

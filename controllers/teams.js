@@ -4,7 +4,7 @@ const Venue = require('../models/venue');
 function teamsIndex(req, res) {
   Team
     .find()
-    .populate('venue')
+    .populate('venues')
     .exec()
     .then((teams) =>{
       res.render('teams/index', { teams });
@@ -17,7 +17,7 @@ function teamsIndex(req, res) {
 function teamsShow(req, res) {
   Team
     .findById(req.params.id)
-    .populate('venue')
+    .populate('venues user comments.user')
     .exec()
     .then(team => {
       res.render('teams/show', { team });
@@ -38,6 +38,8 @@ function teamsNew(req, res) {
 }
 
 function teamsCreate(req, res) {
+  req.body.user = req.currentUser;
+
   Team
     .create(req.body)
     .then(() => res.redirect('/teams'))
@@ -47,7 +49,7 @@ function teamsCreate(req, res) {
 function teamsEdit(req, res) {
   Team
     .findById(req.params.id)
-    .populate('venue')
+    .populate('venues')
     .exec()
     .then((team) => {
       if(!team) return res.status(404).send('Not found');
@@ -87,6 +89,8 @@ function teamsDelete(req, res) {
 }
 
 function teamsCommentsCreate(req, res) {
+  req.body.user = req.currentUser;
+
   Team
     .findById(req.params.id)
     .exec()

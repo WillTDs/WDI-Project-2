@@ -1,55 +1,89 @@
+<div class="container box">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <h2 class="teamCardVenue top"><%= team.name %></h2>
+        <div style="background-color:<%= team.color %>">
+          <img class="card-img-top team" src="/assets/images/shirt.png" alt="Card image cap">
+        </div>
+        <% if(team.user) { %>
+          <p>Owned by: <%= team.user.username %></p>
+          <% } %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <% if(locals.isAuthenticated && team.user && team.user.id === locals.currentUser.id) { %>
+            <form class="comment" action="/teams/<%= team.id %>" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <div class="row">
+                <div class="col-md-6">
+                  <button class="btn btn-danger btn-full">Delete Team</button>
+                </div>
+                <div class="col-md-6">
+                  <a href="/teams/<%= team.id %>/edit" class="btn btn-success btn-full">Edit Team</a>
+                </div>
+              </div>
+            </form>
+            <% } %>
 
-<div class="container">
-<div class="row">
-<div class="col-lg-5 showBox">
-  <h2><%= team.name %></h2>
-  <p><%= team.venue.name %></p>
-  <a class="edit" href="/teams/<%= team.id %>/edit">Edit</a>
-  <form class="comment" action="/teams/<%= team.id %>" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-  <div class="col-2">
-    <button class="delete">Delete</button>
-  </div>
-</form>
-</div>
-
-<div class="comments col-lg-5">
-  <form method="POST" action="/teams/<%= team.id %>/comments">
-    <div>
-      <label>Leave a message</label>
-      <textarea name="text" placeholder="Express an interest"></textarea>
-    </div>
-    <button>Post</button>
-  </form>
-
-<% team.comments.forEach(comment => { %>
-  <li><%= comment.text %> - <%= comment.rating %>/5</li>
-    <form class="comment" action="/teams/<%= team.id %>/comments/<%= comment.id %>" method="POST">
-      <input type="hidden" name="_method" value="DELETE">
-    <div class="col-2">
-      <button class="delete">Delete</button>
-    </div>
-  </form>
-<% }) %>
-</div>
-<div class="statuss col-lg-5">
-
-  <form method="POST" action="/teams/<%= team.id %>/statuses">
-    <div>
-      <label>Status</label>
-      <textarea name="text"></textarea>
-    </div>
-    <button>Add</button>
-  </form>
-
-<% team.statuses.forEach(status => { %>
-  <li><%= status.text %></li>
-    <form class="status" action="/teams/<%= team.id %>/statuses/<%= status.id %>" method="POST">
-      <input type="hidden" name="_method" value="DELETE">
-    <div class="col-2">
-      <button class="delete">Delete</button>
-    </div>
-  </form>
-<% }) %>
-</div>
-</div>
+            <% if(locals.isAuthenticated && team.user && team.user.id === locals.currentUser.id) { %>
+              <h3 class="commentTitle">Add a Status</h3>
+              <form method="POST" action="/teams/<%= team.id %>/statuses">
+                <div class="form-group">
+                  <label>Status</label>
+                  <textarea class="form-control" name="text"></textarea>
+                </div>
+              <button class="btn btn-success">Add</button>
+              </form>
+              <% } %>
+              <h3 class="commentTitle">Statuses</h3>
+              <% if(team.statuses.length === 0) { %>
+              <p>This team has 0 statuses</p>
+              <% } %>
+              <% team.statuses.forEach(status => { %>
+                <li><%= status.text %></li>
+                <form class="status" action="/teams/<%= team.id %>/statuses/<%= status.id %>" method="POST">
+                <% if(locals.isAuthenticated && team.user && team.user.id === locals.currentUser.id) { %>
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button class="btn btn-success delete">Delete</button>
+                  <% } %>
+                  </form>
+                  <% }) %>
+                  <% if(locals.isAuthenticated) { %>
+                    <form method="POST" action="/teams/<%= team.id %>/comments">
+                    <div class="form-group">
+                    <label>Leave a message</label>
+                    <textarea name="text" placeholder="Express an interest" class="form-control"></textarea>
+                    </div>
+                    <button class="btn btn-success">Post</button>
+                    </form>
+                    <% } %>
+                    <h3 class="commentTitle">Comments</h3>
+                    <% if(team.comments.length === 0) { %>
+                    <p>This team has 0 comments</p>
+                    <% } %>
+                    <% team.comments.forEach(comment => { %>
+                      <li><%= comment.text %> - <%= comment.user.username %></li>
+                      <% if(locals.isAuthenticated && comment.user && comment.user.id === locals.currentUser.id) { %>
+                        <form class="comment" action="/teams/<%= team.id %>/comments/<%= comment.id %>" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <div>
+                        <button class="btn btn-success delete">Delete</button>
+                        </div>
+                        </form>
+                        <% } %>
+                        <% }) %>
+                        <h4>Leagues:</h4>
+                          <div class="row">
+                          <% team.venues.forEach(venue => { %>
+                            <div class="col-md-6">
+                              <a href="/venues/<%= venue.id %>" class="btn btn-outline-success btn-full"><%= venue.name %></a>
+                            </div>
+                            <% }) %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>

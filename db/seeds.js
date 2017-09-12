@@ -25,26 +25,29 @@ User.create([{
       format: '5-A-SIDE',
       day: 'Thursday',
       address: 'Rokerby School, Barking Road, E16 4DD',
+      image: '/assets/images/canaryWharf.png',
       location: {
         lat: 51.5186123,
         lng: 0.0134932
       }
     }, {
       name: 'Stratford',
-      pitch: 'Astro',
+      pitch: 'Grass',
       format: '7-A-SIDE',
       day: 'Thursday',
       address: 'Chobham Academy, 40 Cheering Lane, E20 1BD',
+      image: '/assets/images/stratford.png',
       location: {
         lat: 51.5493111,
         lng: 0.0094444
       }
     }, {
       name: 'Liverpool Street',
-      pitch: 'Astro',
+      pitch: 'Grass',
       format: '5-A-SIDE',
       day: 'Sunday',
       address: 'Bow School, Rooftop pitch, E3 3QW',
+      image: '/assets/images/liverpoolStreet.png',
       location: {
         lat: 51.5234183,
         lng: -0.0117561
@@ -55,6 +58,7 @@ User.create([{
       format: '7-A-SIDE',
       day: 'Thursday',
       address: 'Holloway School, Caledonian Road, N7 0EQ',
+      image: '/assets/images/caledonianRoad.png',
       location: {
         lat: 51.5574908,
         lng: -0.1411286
@@ -65,6 +69,7 @@ User.create([{
       format: '5-A-SIDE',
       day: 'Sunday',
       address: 'Vauxhall rhino turf, Lollard Street, SE11 6PX',
+      image: '/assets/images/vauxhall.png',
       location: {
         lat: 51.4654221,
         lng: -0.2198861
@@ -75,129 +80,129 @@ User.create([{
     console.log(`${venues.length} venues created`);
     return Team.create([{
       name: 'FC Twente Bensons',
-      venue: venues[0, 2],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#3696ff',
+      venues: [venues[0]],
+      statuses: [{
+        text: 'Need 1 more player'
       }]
     },{
       name: 'Petr Cech Yourself',
-      venue: venues[0, 2],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#F1C40F',
+      venues: [venues[0]],
+      statuses: [{
+        text: 'Full roster'
       }]
     },{
       name: 'Haven’t Got a Kalou',
-      venue: venues[0, 2],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#A93226',
+      venues: [venues[0], venues[2]],
+      statuses: [{
+        text: 'Looking for 1 player'
       }]
     },{
       name: 'We Arbeloa Lot of Teams',
-      venue: venues[0, 2],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#212F3C',
+      venues: [venues[0], venues[2]],
+      statuses: [{
+        text: 'We\'re folding. Dont bother'
       }]
     },{
       name: 'Murder On Zidane’s Floor',
-      venue: [venues[0], venues[2]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#FF0000',
+      venues: [venues[0], venues[2]],
+      statuses: [{
+        text: 'Need 2 players'
       }]
     },{
       name: 'Don’tCallMeSchürrle',
-      venue: [venues[0], venues[2]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#ffffff',
+      venues: [venues[0], venues[2]],
+      statuses: [{
+        text: 'Need players asap'
       }]
     },{
       name: 'Beat Around Debuchy',
-      venue: [venues[1], venues[4]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#F1C40F',
+      venues: [venues[1], venues[4]],
+      statuses: [{
+        text: 'Looking for a player'
       }]
     },{
       name: 'Lallanas in Pyjamas',
-      venue: [venues[1], venues[4]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#3696ff',
+      venues: [venues[1], venues[4]],
+      statuses: [{
+        text: 'Need players asap'
       }]
     },{
       name: '50 Shades O’Shea',
-      venue: [venues[1], venues[4]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#212F3C',
+      venues: [venues[1], venues[4]],
+      statuses: [{
+        text: 'We\'re full'
       }]
     },{
       name: 'One Flew Over Lukaku’s Nest',
-      venue: [venues[1], venues[4]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#FF0000',
+      venues: [venues[1], venues[4]],
+      statuses: [{
+        text: 'full now'
       }]
     },{
       name: 'Bayer Neverlusen',
-      venue: [venues[2], venues[3]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#ffffff',
+      venues: [venues[2], venues[3]],
+      statuses: [{
+        text: 'Need 2 players'
       }]
     },{
       name: 'Chiellini Con Carne',
-      venue: [venues[2], venues[3]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#3696ff',
+      venues: [venues[2], venues[3]],
+      statuses: [{
+        text: 'Need players asap'
       }]
     },{
       name: 'Ospina Colada',
-      venue: [venues[2], venues[3]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#F1C40F',
+      venues: [venues[2], venues[3]],
+      statuses: [{
+        text: 'Its only me. Dunno why i bother'
       }]
     },{
       name: 'Kroos Control',
-      venue: [venues[3], venues[4]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#FF0000',
+      venues: [venues[3], venues[4]],
+      statuses: [{
+        text: 'Need more players'
       }]
     },{
       name: 'Gylfi Pleasures',
-      venue: [venues[3], venues[4]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#3696ff',
+      venues: [venues[3], venues[4]],
+      statuses: [{
+        text: 'Need 1 or 2 more'
       }]
     },{
       name: 'Boom Xhakalaka',
-      venue: [venues[3], venues[4]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#A93226',
+      venues: [venues[3], venues[4]],
+      statuses: [{
+        text: 'Need players'
       }]
     },{
       name: 'Pleased to Michu',
-      venue: [venues[3], venues[2]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#F1C40F',
+      venues: [venues[3], venues[2]],
+      statuses: [{
+        text: 'Want another player'
       }]
     },{
       name: 'Obi Wan – Kenobi Nil',
-      venue: [venues[3], venues[4]],
-      comments: [{
-        text: 'Need players asap',
-        rating: 5
+      color: '#3696ff',
+      venues: [venues[3], venues[4]],
+      statuses: [{
+        text: 'We gonna quit'
       }]
     }]);
   })

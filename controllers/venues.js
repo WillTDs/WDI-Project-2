@@ -16,11 +16,11 @@ function venuesIndex(req, res) {
 function venuesShow(req, res) {
   Venue
     .findById(req.params.id)
-    .populate('venue')
+    .populate('venues')
     .exec()
     .then(venue => {
       return Team
-        .find({ venue: venue })
+        .find({ venues: venue })
         .exec()
         .then((teams) => {
           res.render('venues/show', { venue, teams });

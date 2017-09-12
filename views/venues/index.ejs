@@ -1,4 +1,14 @@
-<h1 class="title">Venues</h1>
-<% venues.forEach((venue)=> { %>
-<a href="/venues/<%= venue.id %>"><h2><%= venue.name %></h2></a>
-<% }) %>
+<div class="container box">
+  <div class="row">
+  <% venues.forEach((venue)=> { %>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top ven" src="<%= venue.image %>" alt="Card image cap">
+          <div class="card-block">
+            <a href="/venues/<%= venue.id %>" class="btn btn-outline-success btn-full"><%= venue.name %></a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>

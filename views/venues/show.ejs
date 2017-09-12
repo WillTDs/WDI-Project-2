@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container box">
   <div class="row">
     <div class="col-lg-4 venue">
       <h2><%= venue.name %></h2>
@@ -7,13 +7,13 @@
       <h4><%= venue.day %></h4>
       <h4><%= venue.address %></h4>
     </div>
-    <div class="col-lg-4 venue">
-      <p>THIS WILL BE A GOOGLE MAP DISPLAY</p>
+    <div class="col-lg-4 venueMap">
+      <div id="map" data-venue="<%= JSON.stringify(venue) %>"></div>
     </div>
     <div class="col-lg-4 venue">
       <h2>Teams In League</h2>
       <% teams.forEach((team) => { %>
-      <h4><a href="/teams/<%= team.id %>"><%= team.name %></a></h4>
+      <a href="/teams/<%= team.id %>" class="btn btn-outline-success btn-full btn-stack"><%= team.name %></a>
       <% }) %>
     </div>
   </div>
