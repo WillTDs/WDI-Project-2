@@ -1,6 +1,5 @@
 /* global google */
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Hello world');
 
   const mapDiv = document.getElementById('map');
   console.log(mapDiv);

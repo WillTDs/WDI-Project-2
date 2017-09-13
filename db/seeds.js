@@ -21,7 +21,7 @@ User.create([{
     console.log(`${users.length} users created`);
     return Venue.create([{
       name: 'Canary Wharf',
-      pitch: 'Grass',
+      pitch: 'Grass Pitch',
       format: '5-A-SIDE',
       day: 'Thursday',
       address: 'Rokerby School, Barking Road, E16 4DD',
@@ -32,7 +32,7 @@ User.create([{
       }
     }, {
       name: 'Stratford',
-      pitch: 'Grass',
+      pitch: 'Grass Pitch',
       format: '7-A-SIDE',
       day: 'Thursday',
       address: 'Chobham Academy, 40 Cheering Lane, E20 1BD',
@@ -43,7 +43,7 @@ User.create([{
       }
     }, {
       name: 'Liverpool St',
-      pitch: 'Grass',
+      pitch: 'Grass Pitch',
       format: '5-A-SIDE',
       day: 'Sunday',
       address: 'Bow School, Rooftop pitch, E3 3QW',
@@ -54,7 +54,7 @@ User.create([{
       }
     }, {
       name: 'Caledonian Rd',
-      pitch: 'Grass',
+      pitch: 'Astroturf Pitch',
       format: '7-A-SIDE',
       day: 'Thursday',
       address: 'Holloway School, Caledonian Road, N7 0EQ',
@@ -65,7 +65,7 @@ User.create([{
       }
     }, {
       name: 'Vauxhall',
-      pitch: 'Grass',
+      pitch: 'Grass Pitch',
       format: '5-A-SIDE',
       day: 'Sunday',
       address: 'Vauxhall rhino turf, Lollard Street, SE11 6PX',
@@ -114,7 +114,7 @@ User.create([{
         text: 'Need 2 players'
       }]
     },{
-      name: 'Don’tCallMeSchürrle',
+      name: 'Don’t Call Me Schürrle',
       color: '#ffffff',
       venues: [venues[0], venues[2]],
       statuses: [{
