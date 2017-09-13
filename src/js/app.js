@@ -14,7 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     new google.maps.Marker({
       position: venueData.location,
       map: map,
-      animation: google.maps.Animation.DROP
+      animation: google.maps.Animation.DROP,
+      icon: {
+        url: '/assets/images/marker.png',
+        scaledSize: new google.maps.Size(30,40)
+      }
     });
   }
 
