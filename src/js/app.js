@@ -18,4 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
       animation: google.maps.Animation.DROP
     });
   }
+
+  const $form = $('form');
+  if($form.length > 0) $form.validate();
+
 });

@@ -10,7 +10,7 @@ function sessionsCreate(req, res) {
     .findOne({ email: req.body.email })
     .then(user => {
       if(!user || !user.validatePassword(req.body.password)) {
-        req.flash('Invalid credentials');
+        req.flash('danger', 'Invalid credentials');
         return res.redirect('/login');
       }
 

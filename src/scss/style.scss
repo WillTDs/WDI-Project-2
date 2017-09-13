@@ -131,6 +131,13 @@ h1 {
   font-size: 22px;
 }
 
+//NOTIFICATION
+.notification.is-danger {
+  background-color: #d9534f;
+  text-align: center;
+  padding: 5px 0;
+}
+//MAPS
 #map {
   border: none;
   height: 300px;

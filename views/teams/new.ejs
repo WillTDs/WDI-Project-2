@@ -2,24 +2,24 @@
   <div class="row">
     <div class="col-md-6 offset-md-3 box">
       <form method="POST" action="/teams">
-    <div class="form-group">
-      <label>Team Name</label>
-      <input class="form-control" type="text" name="name">
-    </div>
-    <div class="form-group">
-      <label>Shirt Colour</label>
-      <input type="color" name="color">
-    </div>
-      <label>Venue</label>
-      <% venues.forEach((venue)=> { %>
         <div class="form-group">
-        <label class="form-check-label">
-        <input type="checkbox" name="venues" value="<%= venue.id %>"> <%= venue.name %>
+          <label>Team Name</label>
+          <input class="form-control" type="text" name="name">
+        </div>
+        <div class="form-group">
+          <label>Shirt Colour</label>
+          <input type="color" name="color">
+        </div>
+        <label>Venue</label>
+        <% venues.forEach((venue)=> { %>
+        <div class="form-group">
+          <label class="form-check-label">
+          <input type="checkbox" name="venues" value="<%= venue.id %>"> <%= venue.name %>
         </label>
         </div>
-      <% }) %>
-    <button class="btn btn-success">Post Team</button>
-  </form>
-</div>
-</div>
+        <% }) %>
+        <button class="btn btn-success">Post Team</button>
+      </form>
+    </div>
+  </div>
 </div>

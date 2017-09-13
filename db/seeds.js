@@ -42,7 +42,7 @@ User.create([{
         lng: 0.0094444
       }
     }, {
-      name: 'Liverpool Street',
+      name: 'Liverpool St',
       pitch: 'Grass',
       format: '5-A-SIDE',
       day: 'Sunday',
@@ -53,7 +53,7 @@ User.create([{
         lng: -0.0117561
       }
     }, {
-      name: 'Caledonian Road',
+      name: 'Caledonian Rd',
       pitch: 'Grass',
       format: '7-A-SIDE',
       day: 'Thursday',

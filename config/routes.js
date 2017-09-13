@@ -19,14 +19,15 @@ router.route('/venues/:id')
 
 router.route('/teams')
   .get(teams.index)
-  .post(teams.create);
+  .post(secureRoute, teams.create);
 
-router.get('/teams/new', teams.new);
+router.route('/teams/new')
+  .get(secureRoute, teams.new);
 
 router.route('/teams/:id')
   .get(teams.show)
-  .put(teams.update)
-  .delete(teams.delete);
+  .put(secureRoute, teams.update)
+  .delete(secureRoute, teams.delete);
 
 router.get('/teams/:id/edit', teams.edit);
 
